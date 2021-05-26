@@ -1,0 +1,16 @@
+import discord
+from discord.ext.commands import Bot
+
+bot = Bot(command_prefix='$')
+TOKEN = '<ENTER TOKEN HERE>' $enter your bot token here
+
+@bot.event
+async def on_ready():
+	print(f'Bot connected as {bot.user}')
+	
+@bot.event
+async def on_message(message):
+	if message.content == '': #enter the message you want to be spammed here
+		await message.channel.send('') #enter the same message as above
+		
+bot.run('ENTER TOKEN HERE') #enter your bot token here
